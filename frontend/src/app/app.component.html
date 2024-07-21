@@ -1,0 +1,131 @@
+<form [formGroup]="insuranceForm" (ngSubmit)="submitForm()" class="container mt-4">
+  <h1 class="mb-3">Primary Policies</h1>
+  <div formArrayName="primary" class="form-section">
+    <div *ngFor="let primary of primaryHolders.controls; let i = index" [formGroupName]="i" class="card mb-3">
+      <div class="card-body">
+        <!-- First Row: 3 Inputs -->
+        <div class="form-row">
+          <div class="form-group flex-fill mx-2">
+            <label for="insuranceCompanyName">Insurance Company Name:</label>
+            <input formControlName="insuranceCompanyName" id="insuranceCompanyName" class="form-control">
+          </div>
+          <div class="form-group flex-fill mx-2">
+            <label for="policyNumber">Policy Number:</label>
+            <input formControlName="policyNumber" id="policyNumber" class="form-control">
+          </div>
+          <div class="form-group flex-fill mx-2">
+            <label for="groupName">Group Name:</label>
+            <input formControlName="groupName" id="groupName" class="form-control">
+          </div>
+        </div>
+        <!-- Second Row: 2 Inputs -->
+        <div class="form-row">
+          <div class="form-group flex-fill mx-2">
+            <label for="primaryHolderName">Primary Holder Name:</label>
+            <input formControlName="primaryHolderName" id="primaryHolderName" class="form-control">
+          </div>
+          <div class="form-group flex-fill mx-2">
+            <label for="secondaryHolderName">Secondary Holder Name:</label>
+            <input formControlName="secondaryHolderName" id="secondaryHolderName" class="form-control">
+          </div>
+        </div>
+        <!-- File Inputs -->
+        <div class="form-row">
+          <div class="form-group flex-fill mx-2">
+            <label for="frontImage">Front Image:</label>
+            <input type="file" formControlName="frontImage" id="frontImage" class="form-control-file" 
+              (change)="onFileChange($event, 'frontImage', 'primary', i)">
+          </div>
+          <div class="form-group flex-fill mx-2">
+            <label for="backImage">Back Image:</label>
+            <input type="file" formControlName="backImage" id="backImage" class="form-control-file" 
+              (change)="onFileChange($event, 'backImage', 'primary', i)">
+          </div>
+        </div>
+        <!-- Image Previews -->
+        <div class="form-row">
+          <div class="form-group flex-fill mx-2">
+            <div class="image-preview" *ngIf="primary.get('frontImageSrc')?.value">
+              <img [src]="primary.get('frontImageSrc')?.value" class="img-thumbnail">
+            </div>
+          </div>
+          <div class="form-group flex-fill mx-2">
+            <div class="image-preview" *ngIf="primary.get('backImageSrc')?.value">
+              <img [src]="primary.get('backImageSrc')?.value" class="img-thumbnail">
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-danger delete-button" (click)="deletePrimaryHolder(i)">Delete Primary Policy</button>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-success add-button" (click)="addPrimaryHolder()">Add Primary Policy</button>
+
+  <div formArrayName="secondary" class="form-section">
+    <h1 class="mb-3">Secondary Policy holder</h1>
+    <div *ngFor="let secondary of secondaryHolders.controls; let j = index" [formGroupName]="j" class="card mb-3">
+      <div class="card-body">
+        <!-- First Row: 3 Inputs -->
+        <div class="form-row">
+          <div class="form-group flex-fill mx-2">
+            <label for="insuranceCompanyName">Insurance Company Name:</label>
+            <input formControlName="insuranceCompanyName" id="insuranceCompanyName" class="form-control">
+          </div>
+          <div class="form-group flex-fill mx-2">
+            <label for="policyNumber">Policy Number:</label>
+            <input formControlName="policyNumber" id="policyNumber" class="form-control">
+          </div>
+          <div class="form-group flex-fill mx-2">
+            <label for="groupName">Group Name:</label>
+            <input formControlName="groupName" id="groupName" class="form-control">
+          </div>
+        </div>
+        <!-- Second Row: 2 Inputs -->
+        <div class="form-row">
+          <div class="form-group flex-fill mx-2">
+            <label for="primaryHolderName">Primary Holder Name:</label>
+            <input formControlName="primaryHolderName" id="primaryHolderName" class="form-control">
+          </div>
+          <div class="form-group flex-fill mx-2">
+            <label for="secondaryHolderName">Secondary Holder Name:</label>
+            <input formControlName="secondaryHolderName" id="secondaryHolderName" class="form-control">
+          </div>
+        </div>
+        <!-- File Inputs -->
+        <div class="form-row">
+          <div class="form-group flex-fill mx-2">
+            <label for="frontImage">Front Image:</label>
+            <input type="file" formControlName="frontImage" id="frontImage" class="form-control-file" 
+              (change)="onFileChange($event, 'frontImage', 'secondary', j)">
+          </div>
+          <div class="form-group flex-fill mx-2">
+            <label for="backImage">Back Image:</label>
+            <input type="file" formControlName="backImage" id="backImage" class="form-control-file" 
+              (change)="onFileChange($event, 'backImage', 'secondary', j)">
+          </div>
+        </div>
+        <!-- Image Previews -->
+        <div class="form-row">
+          <div class="form-group flex-fill mx-2">
+            <div class="image-preview" *ngIf="secondary.get('frontImageSrc')?.value">
+              <img [src]="secondary.get('frontImageSrc')?.value" class="img-thumbnail">
+            </div>
+          </div>
+          <div class="form-group flex-fill mx-2">
+            <div class="image-preview" *ngIf="secondary.get('backImageSrc')?.value">
+              <img [src]="secondary.get('backImageSrc')?.value" class="img-thumbnail">
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-danger delete-button" (click)="deleteSecondaryHolder(j)">Delete Secondary Policy</button>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-success add-button" (click)="addSecondaryHolder()">Add Secondary Policy</button>
+  <div>
+    <button type="submit mt-4" class="btn btn-primary submit-button">Submit Form</button>
+  </div>
+
+</form>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "GM3A3qmP8/KTGmDISgW20jfx7M7Yr7GGkRgPG3z+/eU=",
+  "Source": "Image_Upload",
+  "BasePath": "_content/Image_Upload",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Image_Upload\\wwwroot",
+      "Source": "Image_Upload",
+      "ContentRoot": "D:\\smartdata\\Akshit_21_7\\Image_Upload\\wwwroot\\",
+      "BasePath": "_content/Image_Upload",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\smartdata\\Akshit_21_7\\Image_Upload\\wwwroot\\books\\cover\\peakpx (2)244644859.jpg",
+      "SourceId": "Image_Upload",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\smartdata\\Akshit_21_7\\Image_Upload\\wwwroot\\",
+      "BasePath": "_content/Image_Upload",
+      "RelativePath": "books/cover/peakpx (2)244644859.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\books\\cover\\peakpx (2)244644859.jpg"
+    }
+  ]
+}

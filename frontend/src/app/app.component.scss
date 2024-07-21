@@ -1,0 +1,92 @@
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .add-button,
+  .submit-button {
+    background-color: green;
+    margin-bottom: 20px;
+  }
+  
+  .delete-button {
+    background-color: red;
+  }
+  
+  .container {
+    max-width: 1000px; /* Increased width */
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .img-thumbnail {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    margin: 10px 0; /* Margin above and below images */
+  }
+  
+  button {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .flex-fill {
+    flex: 1;
+    margin-right: 20px; /* Gap between inputs */
+  }
+  
+  .flex-fill:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+  }
+  
+  .mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .form-control-file {
+    display: flex; /* Ensures the file inputs are aligned properly */
+  }
+  
+  .form-group {
+    display: flex; /* Ensures the form groups are aligned properly */
+    flex-direction: column; /* Aligns label and input vertically */
+    gap: 10px; /* Gap between label and input */
+  }
+
+  .image-preview {
+  width: 400px;
+
+  margin-top: 10px;
+}
+
+.image-preview img {
+  max-width: 400px;
+  height: auto;
+  max-height: 300px; /* Adjust height as needed */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+  
+  
+  
+  

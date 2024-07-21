@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\smartdata\\Akshit_21_7\\Image_Upload\\wwwroot\\books\\cover\\peakpx (2)244644859.jpg",
+      "PackagePath": "staticwebassets\\books\\cover\\peakpx (2)244644859.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Image_Upload.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Image_Upload.props",
+      "PackagePath": "build\\Image_Upload.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Image_Upload.props",
+      "PackagePath": "buildMultiTargeting\\Image_Upload.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Image_Upload.props",
+      "PackagePath": "buildTransitive\\Image_Upload.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
